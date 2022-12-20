@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fotografije</title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                font-family: Arial;
+            }
+            .container{
+                max-width: 1680px;
+                margin: 0 auto;
+            }
+            .flex-container{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <h3>Picture element</h3>
+            <picture>
+                <source media="(min-width: 1520px)" srcset="picture/gore-1520px.jpg">
+                <source media="(min-width: 840px)" srcset="picture/gore-840px.jpg">
+                <source media="(min-width: 560px)" srcset="picture/gore-560px.jpg">
+                <img src="picture/gore-280px.jpg" alt="Picture">
+              </picture>
+
+              <div class="flex-container">
+                <img 
+                src="srcset/dolje-240px.jpg"
+                alt="Picture srcset"  
+                srcset=" 
+                    srcset/dolje-240px.jpg 240w, 
+                    srcset/dolje-520px.jpg 520w, 
+                    srcset/dolje-720px.jpg 720w" 
+                sizes="(min-width: 720px) 45vw,
+                       (min-width: 520px) 45vw,
+                       (min-width: 240px) 45vw, 
+                       240px">
+
+                <img 
+                alt="Picture srcset" 
+                src="srcset/dolje-240px.jpg" 
+                srcset=" 
+                    srcset/dolje-240px.jpg 240w, 
+                    srcset/dolje-520px.jpg 520w, 
+                    srcset/dolje-720px.jpg 720w" 
+                    sizes="
+                    (min-width: 720px) 45vw,
+                    (min-width: 520px) 45vw,
+                    (min-width: 240px) 45vw, 
+                    240px">
+              </div>
+        </section>
+    </body>
+</html>
